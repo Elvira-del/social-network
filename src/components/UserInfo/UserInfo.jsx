@@ -2,14 +2,14 @@ import React from "react";
 
 const UserInfo = (props) => {
   return (
-    <div>
-      <h1>{props.name}</h1>
-      <ul>
-        <li>{props.date}</li>
-        <li>{props.city}</li>
-        <li>{props.education}</li>
+    <section className="info">
+      <h1 className="title">{props.name}</h1>
+      <ul className="info__list">
+        <li className="info__item">{props.date}</li>
+        <li className="info__item">{props.city}</li>
+        <li className="info__item">{props.education}</li>
       </ul>
-    </div>
+    </section>
   );
 };
 

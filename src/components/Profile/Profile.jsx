@@ -4,7 +4,7 @@ import UserInfo from "../UserInfo/UserInfo";
 
 const Profile = () => {
   return (
-    <div>
+    <main className="page">
       <UserInfo
         name="Elvira K."
         date="12 august"
@@ -12,7 +12,7 @@ const Profile = () => {
         education="MAEM'15"
       />
       <MyPosts />
-    </div>
+    </main>
   );
 };
 

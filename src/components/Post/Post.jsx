@@ -2,8 +2,8 @@ import React from "react";
 
 const Post = (props) => {
   return (
-    <div>
-      <p>{props.content}</p>
+    <div className="post">
+      <p className="post__text">{props.content}</p>
     </div>
   );
 };
