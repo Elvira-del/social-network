@@ -1,0 +1,7 @@
+@mixin grid($gap: 0, $justify: normal, $align: normal) {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: $justify;
+  align-items: $align;
+  gap: $gap;
+}
