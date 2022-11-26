@@ -1,0 +1,11 @@
+.info {
+  &__wrap {
+    @include grid(30px, start);
+  }
+
+  &__avatar {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+  }
+}
