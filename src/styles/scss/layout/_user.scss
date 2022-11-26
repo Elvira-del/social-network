@@ -1,11 +1,25 @@
 .info {
   &__wrap {
     @include grid(30px, start);
+    padding: 20px 0;
   }
 
   &__avatar {
     width: 130px;
     height: 130px;
     border-radius: 50%;
+  }
+
+  &__content {
+    padding: 10px;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  &__list {
+    @include flex(column, 5px);
   }
 }
