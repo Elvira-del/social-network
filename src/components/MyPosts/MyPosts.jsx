@@ -3,7 +3,7 @@ import Post from "../Post/Post";
 
 const MyPosts = () => {
   return (
-    <section className="posts">
+    <section className="section posts">
       <div className="container">
         <h2 className="subtitle">My posts</h2>
         <form className="posts__form" action="#" method="post">
