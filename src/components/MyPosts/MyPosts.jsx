@@ -1,5 +1,6 @@
 import React from "react";
 import Post from "../Post/Post";
+import avatar from "../../assets/images/avatar.jpg";
 
 const MyPosts = () => {
   return (
@@ -18,8 +19,8 @@ const MyPosts = () => {
             Send
           </button>
         </form>
-        <Post content="Hi! What do you think?" />
-        <Post content="My first post" />
+        <Post avatar={avatar} content="Hi! What do you think?" />
+        <Post avatar={avatar} content="My first post" />
       </div>
     </section>
   );
