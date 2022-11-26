@@ -5,9 +5,8 @@
   }
 
   &__form {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+    @include flex(column, 5px);
+    align-items: center;
   }
 }
 
