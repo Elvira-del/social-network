@@ -4,17 +4,17 @@ import Post from "../Post/Post";
 const MyPosts = () => {
   return (
     <section className="section posts">
-      <div className="container">
+      <div className="container posts__wrap">
         <h2 className="subtitle">My posts</h2>
-        <form className="posts__form" action="#" method="post">
+        <form className="posts__form form" action="#" method="post">
           <textarea
-            className="posts__input"
+            className="form__input"
             cols="30"
-            rows="10"
+            rows="5"
             placeholder="Your text..."
             autoCorrect="on"
           ></textarea>
-          <button className="posts__btn" type="submit">
+          <button className="btn form__btn" type="submit">
             Send
           </button>
         </form>
