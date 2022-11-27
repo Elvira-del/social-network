@@ -1,6 +1,7 @@
 .info {
   &__wrap {
     @include grid(30px, start);
+    grid-auto-flow: column;
     padding: 20px 0;
   }
 
