@@ -4,9 +4,10 @@
   grid-template-columns: minmax(max-content, 1fr) 6fr;
   grid-template-areas:
     "header header"
-    "navbar page";
+    "navbar page"
+    "navbar footer";
   width: 100%;
-  min-height: 100%;
+  min-height: 100vh;
 
   .container {
     width: 100%;
@@ -29,4 +30,8 @@
 
 .page {
   grid-area: page;
+}
+
+.footer {
+  grid-area: footer;
 }

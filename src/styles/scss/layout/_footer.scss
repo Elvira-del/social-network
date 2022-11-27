@@ -1,0 +1,10 @@
+.footer {
+  @include flex(row, 0);
+  align-items: center;
+  min-height: 4vh;
+  text-align: center;
+
+  &__copy {
+    color: #000;
+  }
+}

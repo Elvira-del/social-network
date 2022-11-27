@@ -5,7 +5,7 @@
 
 .nav {
   &__list {
-    @include grid(25px, center, normal);
+    @include grid(25px, center);
     padding: 11%;
     color: #fff;
   }

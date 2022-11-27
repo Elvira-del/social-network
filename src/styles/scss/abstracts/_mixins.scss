@@ -1,4 +1,4 @@
-@mixin grid($gap: 0, $justify: normal, $align: center) {
+@mixin grid($gap: 0, $justify: normal, $align: normal) {
   display: grid;
   justify-content: $justify;
   align-items: $align;
