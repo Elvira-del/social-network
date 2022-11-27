@@ -2,15 +2,8 @@
   @include grid(0, normal, center);
   min-height: 6vh;
   background-color: #324359;
-  color: #fff;
 
   &__wrap {
-    @include grid(0, space-between, center);
-  }
-
-  .nav {
-    &__list {
-      @include grid(25px, end, center);
-    }
+    @include grid(0, normal, center);
   }
 }
