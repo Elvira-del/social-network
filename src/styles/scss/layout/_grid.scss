@@ -1,6 +1,10 @@
 .app {
   @include grid;
   grid-template-rows: auto 1fr auto;
+  grid-template-columns: minmax(max-content, 1fr) 6fr;
+  grid-template-areas:
+    "header header"
+    "navbar page";
   width: 100%;
   min-height: 100%;
 
@@ -13,4 +17,16 @@
   .section {
     margin-bottom: 50px;
   }
+}
+
+.header {
+  grid-area: header;
+}
+
+.navbar {
+  grid-area: navbar;
+}
+
+.page {
+  grid-area: page;
 }
