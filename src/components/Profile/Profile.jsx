@@ -5,7 +5,7 @@ import avatar from "../../assets/images/avatar.jpg";
 
 const Profile = () => {
   return (
-    <main className="page">
+    <div className="container">
       <UserInfo
         avatar={avatar}
         name="Elvira K."
@@ -14,7 +14,7 @@ const Profile = () => {
         education="MAEM'15"
       />
       <MyPosts />
-    </main>
+    </div>
   );
 };
 

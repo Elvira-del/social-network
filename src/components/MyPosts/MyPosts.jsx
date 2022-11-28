@@ -5,7 +5,7 @@ import avatar from "../../assets/images/avatar.jpg";
 const MyPosts = () => {
   return (
     <section className="section posts">
-      <div className="container posts__wrap">
+      <div className="posts__wrap">
         <h2 className="subtitle">My posts</h2>
         <form className="posts__form form" action="#" method="post">
           <textarea

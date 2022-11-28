@@ -13,10 +13,12 @@ function App() {
         <Header />
         <Navbar />
 
-        <Routes>
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/dialogs" element={<Dialogs />} />
-        </Routes>
+        <main className="page">
+          <Routes>
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/dialogs" element={<Dialogs />} />
+          </Routes>
+        </main>
 
         <Footer />
       </div>
