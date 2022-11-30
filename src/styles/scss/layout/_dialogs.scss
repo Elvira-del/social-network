@@ -1,0 +1,10 @@
+.dialogs {
+  @include flex(column, 25px);
+  padding: 20px 0;
+  width: 100%;
+
+  &__wrap {
+    @include grid;
+    grid-template-columns: 1fr 2fr;
+  }
+}

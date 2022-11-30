@@ -7,7 +7,9 @@ const Dialogs = () => {
       <section className="section dialogs">
         <h2 className="subtitle">Dialogs</h2>
 
-        <Contacts />
+        <div className="dialogs__wrap">
+          <Contacts />
+        </div>
       </section>
     </div>
   );
