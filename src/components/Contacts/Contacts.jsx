@@ -1,40 +1,36 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+// import { Link } from "react-router-dom";
+import ContactItem from "../ContactItem/ContactItem";
 
 const Contacts = () => {
+  const [contacts, setContacts] = useState([]);
+
+  useEffect(() => {
+    fetch("https://dummyapi.io/data/v1/user?limit=10", {
+      method: "GET",
+      headers: { "app-id": "638754260803155fa32416a8" },
+    })
+      .then((res) => res.json())
+      .then((json) => {
+        setContacts(json.data);
+      })
+      .catch((error) => {
+        console.warn(error);
+        alert("Произошла ошибка при загрузке данных.");
+      });
+  }, []);
+
   return (
     <div className="contacts">
       <ul className="contacts__list">
-        <li className="contacts__item">
-          <Link to="/dialogs/1">Curtis Peterson</Link>
-        </li>
-        <li className="contacts__item">
-          <Link to="/dialogs/2">Henry Wells</Link>
-        </li>
-        <li className="contacts__item">
-          <Link to="/dialogs/3">Linda Peters</Link>
-        </li>
-        <li className="contacts__item">
-          <Link to="/dialogs/4">Robert Watts</Link>
-        </li>
-        <li className="contacts__item">
-          <Link to="/dialogs/5">Victoria Ray</Link>
-        </li>
-        <li className="contacts__item">
-          <Link to="/dialogs/6">Charlie Adams</Link>
-        </li>
-        <li className="contacts__item">
-          <Link to="/dialogs/7">Samuel Gibbs</Link>
-        </li>
-        <li className="contacts__item">
-          <Link to="/dialogs/8">Amanda Jensen</Link>
-        </li>
-        <li className="contacts__item">
-          <Link to="/dialogs/9">Janice Lindsey</Link>
-        </li>
-        <li className="contacts__item">
-          <Link to="/dialogs/10">Joseph Houston</Link>
-        </li>
+        {contacts.map((item, idx) => (
+          <ContactItem
+            key={idx}
+            id={item.id}
+            firstName={item.firstName}
+            lastName={item.lastName}
+          />
+        ))}
       </ul>
     </div>
   );
