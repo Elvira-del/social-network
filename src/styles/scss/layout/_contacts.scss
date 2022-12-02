@@ -1,0 +1,20 @@
+.contacts {
+  padding: 10px 10px 10px 0;
+
+  &__list {
+    @include flex(column, 10px);
+  }
+
+  &__item {
+    @include flex(row, 20px);
+    align-items: center;
+    border-radius: 10px;
+    background-color: #9e9e9e2b;
+  }
+
+  &__icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+}
