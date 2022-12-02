@@ -37,7 +37,12 @@ const Contacts = () => {
     <div className="contacts">
       <ul className="contacts__list">
         {contacts.map((item, idx) => (
-          <ContactItem key={idx} id={item.id} name={item.name} />
+          <ContactItem
+            key={idx}
+            id={item.id}
+            name={item.name}
+            avatar={item.avatar}
+          />
         ))}
       </ul>
     </div>
