@@ -15,6 +15,7 @@ function App() {
 
         <main className="page">
           <Routes>
+            <Route index element={<Profile />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/dialogs/*" element={<Dialogs />} />
           </Routes>
