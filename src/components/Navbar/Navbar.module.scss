@@ -1,0 +1,20 @@
+@use "../../styles/scss/abstracts/mixins";
+
+.navbar {
+  grid-area: navbar;
+  min-width: 15vw;
+  height: 100%;
+  background-color: #324359;
+
+  .nav {
+    &__list {
+      @include mixins.grid(25px, center);
+      padding: 25px;
+      color: #fff;
+    }
+
+    &__link {
+      padding: 8px;
+    }
+  }
+}
