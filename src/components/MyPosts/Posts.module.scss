@@ -1,0 +1,43 @@
+@use "../../styles/scss/abstracts/mixins";
+
+.posts {
+  &__wrap {
+    @include mixins.grid(25px);
+    grid-auto-flow: row;
+  }
+
+  &__form {
+    @include mixins.flex(column, 5px);
+    align-items: center;
+  }
+
+  .form {
+    &__input {
+      padding: 10px;
+      width: 100%;
+      border: none;
+      border-radius: 10px;
+      background-color: rgba(158, 158, 158, 17%);
+      resize: none;
+    }
+
+    &__btn {
+      align-self: flex-end;
+    }
+  }
+
+  .post {
+    @include mixins.flex(row, 30px);
+    align-items: center;
+
+    &__avatar {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    &__text {
+      flex-basis: 80%;
+    }
+  }
+}
