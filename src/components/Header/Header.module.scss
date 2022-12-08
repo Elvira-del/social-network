@@ -1,0 +1,11 @@
+@use "../../styles/scss/abstracts/mixins";
+
+.header {
+  @include mixins.grid(0, normal, center);
+  min-height: 6vh;
+  background-color: #324359;
+
+  &__wrap {
+    @include mixins.grid(0, normal, center);
+  }
+}

@@ -1,10 +1,12 @@
 import React from "react";
 import logo from "../../assets/logo.svg";
+import style from "./Header.module.scss";
 
 const Header = () => {
+  console.log(style);
   return (
-    <header className="header">
-      <div className="container header__wrap">
+    <header className={style.header}>
+      <div className={`container ${style.header__wrap}`}>
         <img className="logo" src={logo} width="50" height="50" alt="" />
       </div>
     </header>

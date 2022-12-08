@@ -1,9 +1,0 @@
-.header {
-  @include grid(0, normal, center);
-  min-height: 6vh;
-  background-color: #324359;
-
-  &__wrap {
-    @include grid(0, normal, center);
-  }
-}
