@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Contacts from "../Contacts/Contacts";
 import Messages from "../Messages/Messages";
+import style from "./Dialogs.module.scss";
 
 const Dialogs = () => {
   const [dialogs, setDialogs] = useState([]);
@@ -19,10 +20,10 @@ const Dialogs = () => {
 
   return (
     <div className="container">
-      <section className="section dialogs">
+      <section className={`section ${style.dialogs}`}>
         <h2 className="subtitle">Dialogs</h2>
 
-        <div className="dialogs__wrap">
+        <div className={style.dialogs__wrap}>
           <Contacts contacts={dialogs} />
           <Messages messages={dialogs} />
         </div>

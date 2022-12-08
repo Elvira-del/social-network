@@ -3,7 +3,6 @@ import ContactItem from "../ContactItem/ContactItem";
 import style from "./Contacts.module.scss";
 
 const Contacts = (props) => {
-  console.log(style);
   return (
     <div className="contacts">
       <ul className={style.contacts__list}>
