@@ -1,5 +1,7 @@
+@use "../../styles/scss/abstracts/mixins";
+
 .footer {
-  @include flex(row, 0);
+  @include mixins.flex(row, 0);
   align-items: center;
   min-height: 4vh;
   text-align: center;
