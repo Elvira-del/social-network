@@ -2,6 +2,7 @@
 
 .header {
   @include mixins.grid(0, normal, center);
+  grid-area: header;
   min-height: 6vh;
   background-color: #324359;
 

@@ -7,7 +7,13 @@ const Header = () => {
   return (
     <header className={style.header}>
       <div className={`container ${style.header__wrap}`}>
-        <img className="logo" src={logo} width="50" height="50" alt="" />
+        <img
+          className={style.header__logo}
+          src={logo}
+          width="50"
+          height="50"
+          alt=""
+        />
       </div>
     </header>
   );

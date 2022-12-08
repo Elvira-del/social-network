@@ -2,6 +2,7 @@
 
 .footer {
   @include mixins.flex(row, 0);
+  grid-area: footer;
   align-items: center;
   min-height: 4vh;
   text-align: center;
