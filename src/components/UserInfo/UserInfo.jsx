@@ -1,17 +1,22 @@
 import React from "react";
+import style from "./User.module.scss";
 
 const UserInfo = (props) => {
   return (
-    <section className="section info">
-      <div className="info__wrap">
-        <img className="info__avatar" src={props.avatar} alt="User avatar" />
+    <section className={`section ${style.info}`}>
+      <div className={style.info__wrap}>
+        <img
+          className={style.info__avatar}
+          src={props.avatar}
+          alt="User avatar"
+        />
 
-        <div className="info__content">
-          <h1 className="info__title">{props.name}</h1>
-          <ul className="info__list">
-            <li className="info__item">Date of Birth: {props.date}</li>
-            <li className="info__item">City: {props.city}</li>
-            <li className="info__item">Education: {props.education}</li>
+        <div className={style.info__content}>
+          <h1 className={style.info__title}>{props.name}</h1>
+          <ul className={style.info__list}>
+            <li className={style.info__item}>Date of Birth: {props.date}</li>
+            <li className={style.info__item}>City: {props.city}</li>
+            <li className={style.info__item}>Education: {props.education}</li>
           </ul>
         </div>
       </div>

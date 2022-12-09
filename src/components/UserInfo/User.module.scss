@@ -1,6 +1,8 @@
+@use "../../styles/scss/abstracts/mixins";
+
 .info {
   &__wrap {
-    @include grid(30px, start);
+    @include mixins.grid(30px, start);
     grid-auto-flow: column;
     padding: 20px 0;
   }
@@ -21,6 +23,6 @@
   }
 
   &__list {
-    @include flex(column, 5px);
+    @include mixins.flex(column, 5px);
   }
 }
