@@ -1,36 +1,52 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import Post from "../Post/Post";
 import avatar from "../../assets/images/avatar.jpg";
+import style from "./Posts.module.scss";
 
 const MyPosts = () => {
   const [textPost, setTextPost] = useState("");
-  const newPostContainer = useRef(null);
+  const [posts, setPosts] = useState([]);
+  const [isPost, setIsPost] = useState(false);
+
+  const handleChange = (e) => {
+    setTextPost(e.target.value);
+  };
 
   const addNewPost = (e) => {
     e.preventDefault();
-    setTextPost(newPostContainer.current.value);
+    setPosts([...posts, { post: textPost }]);
+    setIsPost(true);
+    setTextPost("");
   };
 
   return (
-    <section className="section posts">
-      <div className="posts__wrap">
+    <section className={`section ${style.posts}`}>
+      <div className={style.posts__wrap}>
         <h2 className="subtitle">My posts</h2>
 
-        <form className="posts__form form" action="#" method="post">
+        <form className={`${style.posts__form} form`} action="#" method="post">
           <textarea
-            className="form__input"
-            ref={newPostContainer}
+            className={style.form__input}
+            value={textPost}
+            onChange={handleChange}
             cols="30"
             rows="5"
             placeholder="Your text..."
             autoCorrect="on"
-          ></textarea>
-          <button className="btn form__btn" type="submit" onClick={addNewPost}>
+          />
+          <button
+            className={`btn ${style.form__btn}`}
+            onClick={addNewPost}
+            type="submit"
+          >
             Send
           </button>
         </form>
 
-        {textPost !== "" && <Post avatar={avatar} content={textPost} />}
+        {isPost &&
+          posts.map((item, idx) => (
+            <Post key={idx} style={style} avatar={avatar} content={item.post} />
+          ))}
       </div>
     </section>
   );
