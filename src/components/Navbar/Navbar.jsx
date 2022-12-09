@@ -3,7 +3,6 @@ import { NavLink } from "react-router-dom";
 import style from "./Navbar.module.scss";
 
 const Navbar = () => {
-  console.log(style);
   return (
     <aside className={style.navbar}>
       <nav className={style.nav}>
