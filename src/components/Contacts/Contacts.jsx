@@ -1,5 +1,5 @@
 import React from "react";
-import ContactItem from "../ContactItem/ContactItem";
+import { ContactItem } from "../ContactItem/ContactItem";
 import style from "./Contacts.module.scss";
 
 const Contacts = (props) => {
@@ -20,4 +20,4 @@ const Contacts = (props) => {
   );
 };
 
-export default Contacts;
+export { Contacts };

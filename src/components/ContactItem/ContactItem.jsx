@@ -15,4 +15,4 @@ const ContactItem = (props) => {
   );
 };
 
-export default ContactItem;
+export { ContactItem };

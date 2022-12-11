@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Contacts from "../Contacts/Contacts";
-import Messages from "../Messages/Messages";
+import { Contacts } from "../Contacts/Contacts";
+import { Messages } from "../Messages/Messages";
 import style from "./Dialogs.module.scss";
 
 const Dialogs = () => {
@@ -32,4 +32,4 @@ const Dialogs = () => {
   );
 };
 
-export default Dialogs;
+export { Dialogs };

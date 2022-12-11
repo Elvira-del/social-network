@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Post from "../Post/Post";
+import { Post } from "../Post/Post";
 import avatar from "../../assets/images/avatar.jpg";
 import style from "./Posts.module.scss";
 
@@ -52,4 +52,4 @@ const MyPosts = () => {
   );
 };
 
-export default MyPosts;
+export { MyPosts };

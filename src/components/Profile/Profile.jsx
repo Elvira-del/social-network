@@ -1,6 +1,6 @@
 import React from "react";
-import MyPosts from "../MyPosts/MyPosts";
-import UserInfo from "../UserInfo/UserInfo";
+import { MyPosts } from "../MyPosts/MyPosts";
+import { UserInfo } from "../UserInfo/UserInfo";
 import avatar from "../../assets/images/avatar.jpg";
 
 const Profile = () => {
@@ -18,4 +18,4 @@ const Profile = () => {
   );
 };
 
-export default Profile;
+export { Profile };
