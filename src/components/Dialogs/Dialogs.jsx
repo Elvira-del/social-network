@@ -5,6 +5,7 @@ import style from "./Dialogs.module.scss";
 
 const Dialogs = () => {
   const [dialogs, setDialogs] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     fetch("https://636af450b10125b78fe83042.mockapi.io/dialogs")
@@ -15,7 +16,8 @@ const Dialogs = () => {
       .catch((error) => {
         console.warn(error);
         alert("Произошла ошибка при загрузке данных.");
-      });
+      })
+      .finally(() => setIsLoading(false));
   }, []);
 
   return (
@@ -24,7 +26,7 @@ const Dialogs = () => {
         <h2 className="subtitle">Dialogs</h2>
 
         <div className={style.dialogs__wrap}>
-          <Contacts contacts={dialogs} />
+          <Contacts contacts={dialogs} loading={isLoading} />
           <Messages messages={dialogs} />
         </div>
       </section>
