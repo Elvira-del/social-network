@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Post } from "../Post/Post";
 import avatar from "../../assets/images/avatar.jpg";
 import styles from "./Posts.module.scss";
+import { Form } from "../Form/Form";
 
 const MyPosts = () => {
   const [textPost, setTextPost] = useState("");
@@ -24,24 +25,14 @@ const MyPosts = () => {
       <div className={styles.wrap}>
         <h2 className="subtitle">My posts</h2>
 
-        <form className={`${styles.form} form`} action="#" method="post">
-          <textarea
-            className={styles.input}
-            value={textPost}
-            onChange={handleChange}
-            cols="30"
-            rows="5"
-            placeholder="Your text..."
-            autoCorrect="on"
-          />
-          <button
-            className={`btn ${styles.btn}`}
-            onClick={addNewPost}
-            type="submit"
-          >
-            Send
-          </button>
-        </form>
+        <Form
+          formClass={`${styles.form} form`}
+          inputClass={styles.input}
+          value={textPost}
+          handleChange={handleChange}
+          btnClass={`btn ${styles.btn}`}
+          handleClick={addNewPost}
+        />
 
         {isPost &&
           posts.map((item, idx) => (
