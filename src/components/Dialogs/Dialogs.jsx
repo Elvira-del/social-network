@@ -27,7 +27,7 @@ const Dialogs = () => {
 
         <div className={styles.wrap}>
           <Contacts contacts={dialogs} loading={isLoading} />
-          <Messages messages={dialogs} />
+          <Messages />
         </div>
       </section>
     </div>

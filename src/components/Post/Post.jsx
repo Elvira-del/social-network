@@ -1,10 +1,10 @@
 import React from "react";
 
-const Post = (props) => {
+const Post = ({ classes, avatar, content }) => {
   return (
-    <div className={props.styles.post}>
-      <img className={props.styles.avatar} src={props.avatar} alt="" />
-      <p className={props.styles.text}>{props.content}</p>
+    <div className={classes.post}>
+      <img className={classes.avatar} src={avatar} alt="" />
+      <p className={classes.text}>{content}</p>
     </div>
   );
 };

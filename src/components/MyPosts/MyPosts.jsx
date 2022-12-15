@@ -38,7 +38,7 @@ const MyPosts = () => {
           posts.map((item, idx) => (
             <Post
               key={idx}
-              styles={styles}
+              classes={styles}
               avatar={avatar}
               content={item.post}
             />

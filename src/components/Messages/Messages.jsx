@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Form } from "../Form/Form";
 import styles from "./Messages.module.scss";
 
-const Messages = (props) => {
+const Messages = () => {
   const [textMessage, setTextMessage] = useState("");
   const [messages, setMessages] = useState([]);
 

@@ -1,15 +1,11 @@
 import { Link } from "react-router-dom";
 
-const ContactItem = (props) => {
+const ContactItem = ({ classes, id, name, avatar }) => {
   return (
-    <li className={props.styles.item}>
-      <img
-        className={props.styles.icon}
-        src={props.avatar}
-        alt="Friend avatar"
-      />
-      <Link className={props.styles.link} to={`/dialogs/${props.id}`}>
-        {props.name}
+    <li className={classes.item}>
+      <img className={classes.icon} src={avatar} alt="Friend avatar" />
+      <Link className={classes.link} to={`/dialogs/${id}`}>
+        {name}
       </Link>
     </li>
   );
