@@ -1,24 +1,25 @@
 import React from "react";
+import styles from "./Messages.module.scss";
 
 const Messages = (props) => {
   return (
-    <div className="messages">
-      <div className="messages__content">
+    <div className={styles.messages}>
+      <div className={styles.content}>
         {props.messages.map((item, idx) => (
-          <p className="messages__text" key={idx}>
+          <p className="text" key={idx}>
             {item.stringShort}
           </p>
         ))}
       </div>
 
-      <form className="messages__form" action="#" method="post">
+      <form className={styles.form} action="#" method="post">
         <textarea
-          className="messages__input"
+          className={styles.input}
           cols="30"
           rows="5"
           autoCorrect="on"
         />
-        <button className="btn messages__btn">Send</button>
+        <button className={`btn ${styles.btn}`}>Send</button>
       </form>
     </div>
   );
