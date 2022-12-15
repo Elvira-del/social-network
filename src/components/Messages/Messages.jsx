@@ -1,26 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
+import { Form } from "../Form/Form";
 import styles from "./Messages.module.scss";
 
 const Messages = (props) => {
+  const [textMessage, setTextMessage] = useState("");
+  const [messages, setMessages] = useState([]);
+
+  const observeChangeMessage = (e) => {
+    setTextMessage(e.target.value);
+  };
+
+  const addMessage = (e) => {
+    e.preventDefault();
+    setMessages([...messages, { message: textMessage }]);
+    setTextMessage("");
+  };
+
   return (
     <div className={styles.messages}>
       <div className={styles.content}>
-        {props.messages.map((item, idx) => (
-          <p className="text" key={idx}>
-            {item.stringShort}
+        {messages.map((item, idx) => (
+          <p className={styles.text} key={idx}>
+            {item.message}
           </p>
         ))}
       </div>
 
-      <form className={styles.form} action="#" method="post">
-        <textarea
-          className={styles.input}
-          cols="30"
-          rows="5"
-          autoCorrect="on"
-        />
-        <button className={`btn ${styles.btn}`}>Send</button>
-      </form>
+      <Form
+        formClass={styles.form}
+        inputClass={styles.input}
+        value={textMessage}
+        handleChange={observeChangeMessage}
+        btnClass={`btn ${styles.btn}`}
+        handleClick={addMessage}
+      />
     </div>
   );
 };
