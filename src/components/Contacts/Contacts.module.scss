@@ -3,24 +3,24 @@
 .contacts {
   padding: 10px 10px 10px 0;
 
-  &__list {
+  .loader {
+    height: 100%;
+  }
+
+  .list {
     @include mixins.flex(column, 10px);
   }
 
-  &__item {
+  .item {
     @include mixins.flex(row, 20px);
     align-items: center;
     border-radius: 10px;
     background-color: #9e9e9e2b;
   }
 
-  &__icon {
+  .icon {
     width: 60px;
     height: 60px;
     border-radius: 50%;
   }
-}
-
-.loader {
-  height: 100%;
 }

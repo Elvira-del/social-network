@@ -1,28 +1,28 @@
 @use "../../styles/scss/abstracts/mixins";
 
 .info {
-  &__wrap {
+  .wrap {
     @include mixins.grid(30px, start);
     grid-auto-flow: column;
     padding: 20px 0;
-  }
 
-  &__avatar {
-    width: 130px;
-    height: 130px;
-    border-radius: 50%;
-  }
+    .avatar {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+    }
 
-  &__content {
-    padding: 10px;
-  }
+    .content {
+      padding: 10px;
 
-  &__title {
-    margin: 0;
-    margin-bottom: 10px;
-  }
+      .title {
+        margin: 0;
+        margin-bottom: 10px;
+      }
 
-  &__list {
-    @include mixins.flex(column, 5px);
+      .list {
+        @include mixins.flex(column, 5px);
+      }
+    }
   }
 }

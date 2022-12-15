@@ -2,9 +2,9 @@ import React from "react";
 
 const Post = (props) => {
   return (
-    <div className={props.style.post}>
-      <img className={props.style.post__avatar} src={props.avatar} alt="" />
-      <p className={props.style.post__text}>{props.content}</p>
+    <div className={props.styles.post}>
+      <img className={props.styles.avatar} src={props.avatar} alt="" />
+      <p className={props.styles.text}>{props.content}</p>
     </div>
   );
 };

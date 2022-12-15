@@ -5,7 +5,7 @@
   padding: 20px 0;
   width: 100%;
 
-  &__wrap {
+  .wrap {
     @include mixins.grid;
     grid-template-columns: 1fr 2fr;
   }

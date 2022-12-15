@@ -1,18 +1,16 @@
 @use "../../styles/scss/abstracts/mixins";
 
 .posts {
-  &__wrap {
+  .wrap {
     @include mixins.grid(25px);
     grid-auto-flow: row;
   }
 
-  &__form {
+  .form {
     @include mixins.flex(column, 5px);
     align-items: center;
-  }
 
-  .form {
-    &__input {
+    .input {
       padding: 10px;
       width: 100%;
       border: none;
@@ -21,7 +19,7 @@
       resize: none;
     }
 
-    &__btn {
+    .btn {
       align-self: flex-end;
     }
   }
@@ -30,13 +28,13 @@
     @include mixins.flex(row, 30px);
     align-items: center;
 
-    &__avatar {
+    .avatar {
       width: 50px;
       height: 50px;
       border-radius: 50%;
     }
 
-    &__text {
+    .text {
       flex-basis: 80%;
     }
   }

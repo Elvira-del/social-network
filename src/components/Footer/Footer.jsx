@@ -1,11 +1,11 @@
 import React from "react";
-import style from "./Footer.module.scss";
+import styles from "./Footer.module.scss";
 
 const Footer = () => {
   return (
-    <footer className={style.footer}>
+    <footer className={styles.footer}>
       <div className="container">
-        <span className={style.footer__copy}>© 2022</span>
+        <span className={styles.copy}>© 2022</span>
       </div>
     </footer>
   );

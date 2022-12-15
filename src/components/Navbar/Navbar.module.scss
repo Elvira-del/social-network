@@ -7,13 +7,13 @@
   background-color: #324359;
 
   .nav {
-    &__list {
+    .list {
       @include mixins.grid(25px, center);
       padding: 25px;
       color: #fff;
     }
 
-    &__link {
+    .link {
       padding: 8px;
     }
   }

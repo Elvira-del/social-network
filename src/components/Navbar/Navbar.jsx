@@ -1,38 +1,38 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import style from "./Navbar.module.scss";
+import styles from "./Navbar.module.scss";
 
 const Navbar = () => {
   return (
-    <aside className={style.navbar}>
-      <nav className={style.nav}>
-        <ul className={style.nav__list}>
-          <li className={style.nav__item}>
-            <NavLink className={style.nav__link} to="/profile">
+    <aside className={styles.navbar}>
+      <nav className={styles.nav}>
+        <ul className={styles.list}>
+          <li className={styles.item}>
+            <NavLink className={styles.link} to="/profile">
               Profile
             </NavLink>
           </li>
 
-          <li className={style.nav__item}>
-            <NavLink className={style.nav__link} to="/dialogs">
+          <li className={styles.item}>
+            <NavLink className={styles.link} to="/dialogs">
               Messages
             </NavLink>
           </li>
 
-          <li className={style.nav__item}>
-            <NavLink className={style.nav__link} to="/news">
+          <li className={styles.item}>
+            <NavLink className={styles.link} to="/news">
               News
             </NavLink>
           </li>
 
-          <li className={style.nav__item}>
-            <NavLink className={style.nav__link} to="/music">
+          <li className={styles.item}>
+            <NavLink className={styles.link} to="/music">
               Music
             </NavLink>
           </li>
 
-          <li className={style.nav__item}>
-            <NavLink className={style.nav__link} to="/settings">
+          <li className={styles.item}>
+            <NavLink className={styles.link} to="/settings">
               Settings
             </NavLink>
           </li>

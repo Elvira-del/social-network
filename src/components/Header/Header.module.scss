@@ -6,7 +6,7 @@
   min-height: 6vh;
   background-color: #324359;
 
-  &__wrap {
+  .wrap {
     @include mixins.grid(0, normal, center);
   }
 }

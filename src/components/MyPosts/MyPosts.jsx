@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Post } from "../Post/Post";
 import avatar from "../../assets/images/avatar.jpg";
-import style from "./Posts.module.scss";
+import styles from "./Posts.module.scss";
 
 const MyPosts = () => {
   const [textPost, setTextPost] = useState("");
@@ -20,13 +20,13 @@ const MyPosts = () => {
   };
 
   return (
-    <section className={`section ${style.posts}`}>
-      <div className={style.posts__wrap}>
+    <section className={`section ${styles.posts}`}>
+      <div className={styles.wrap}>
         <h2 className="subtitle">My posts</h2>
 
-        <form className={`${style.posts__form} form`} action="#" method="post">
+        <form className={`${styles.form} form`} action="#" method="post">
           <textarea
-            className={style.form__input}
+            className={styles.input}
             value={textPost}
             onChange={handleChange}
             cols="30"
@@ -35,7 +35,7 @@ const MyPosts = () => {
             autoCorrect="on"
           />
           <button
-            className={`btn ${style.form__btn}`}
+            className={`btn ${styles.btn}`}
             onClick={addNewPost}
             type="submit"
           >
@@ -45,7 +45,12 @@ const MyPosts = () => {
 
         {isPost &&
           posts.map((item, idx) => (
-            <Post key={idx} style={style} avatar={avatar} content={item.post} />
+            <Post
+              key={idx}
+              styles={styles}
+              avatar={avatar}
+              content={item.post}
+            />
           ))}
       </div>
     </section>

@@ -1,21 +1,21 @@
 import React from "react";
 import { ContactItem } from "../ContactItem/ContactItem";
 import { Loader } from "../Loader/Loader";
-import style from "./Contacts.module.scss";
+import styles from "./Contacts.module.scss";
 
 const Contacts = (props) => {
   return (
-    <div className="contacts">
+    <div className={styles.contacts}>
       {props.loading ? (
-        <div className={style.loader}>
+        <div className={styles.loader}>
           <Loader />
         </div>
       ) : (
-        <ul className={style.contacts__list}>
+        <ul className={styles.list}>
           {props.contacts.map((item, idx) => (
             <ContactItem
               key={idx}
-              style={style}
+              styles={styles}
               id={item.id}
               name={item.name}
               avatar={item.avatar}
