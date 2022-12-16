@@ -1,23 +1,34 @@
 import React, { useState } from "react";
-import { Post } from "../Post/Post";
+import { Post } from "./Post/Post";
 import avatar from "../../assets/images/avatar.jpg";
 import styles from "./Posts.module.scss";
 import { Form } from "../Form/Form";
+import { useDispatch, useSelector } from "react-redux";
+import { createPost } from "./postsSlice";
+import { nanoid } from "@reduxjs/toolkit";
 
 const MyPosts = () => {
-  const [textPost, setTextPost] = useState("");
-  const [posts, setPosts] = useState([]);
-  const [isPost, setIsPost] = useState(false);
+  const [contentPost, setContentPost] = useState("");
 
-  const handleChange = (e) => {
-    setTextPost(e.target.value);
+  const posts = useSelector((state) => state.posts);
+  const dispatch = useDispatch();
+
+  const onContentPostChange = (e) => {
+    setContentPost(e.target.value);
   };
 
   const addNewPost = (e) => {
     e.preventDefault();
-    setPosts([...posts, { post: textPost }]);
-    setIsPost(true);
-    setTextPost("");
+    if (contentPost) {
+      dispatch(
+        createPost({
+          id: nanoid(),
+          contentPost,
+        })
+      );
+
+      setContentPost("");
+    }
   };
 
   return (
@@ -28,21 +39,20 @@ const MyPosts = () => {
         <Form
           formClass={`${styles.form} form`}
           inputClass={styles.input}
-          value={textPost}
-          handleChange={handleChange}
+          value={contentPost}
+          handleChange={onContentPostChange}
           btnClass={`btn ${styles.btn}`}
           handleClick={addNewPost}
         />
 
-        {isPost &&
-          posts.map((item, idx) => (
-            <Post
-              key={idx}
-              classes={styles}
-              avatar={avatar}
-              content={item.post}
-            />
-          ))}
+        {posts.map((post, idx) => (
+          <Post
+            key={idx}
+            classes={styles}
+            avatar={avatar}
+            content={post.contentPost}
+          />
+        ))}
       </div>
     </section>
   );
