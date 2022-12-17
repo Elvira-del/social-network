@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Post } from "./Post/Post";
-import avatar from "../../assets/images/avatar.jpg";
 import styles from "./Posts.module.scss";
-import { Form } from "../Form/Form";
+import { Form } from "../../Form/Form";
+import avatar from "../../../assets/images/avatar.jpg";
 import { useDispatch, useSelector } from "react-redux";
 import { createPost } from "./postsSlice";
 import { nanoid } from "@reduxjs/toolkit";

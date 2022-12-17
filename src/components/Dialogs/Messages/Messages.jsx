@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form } from "../Form/Form";
+import { Form } from "../../Form/Form";
 import styles from "./Messages.module.scss";
 
 const Messages = () => {

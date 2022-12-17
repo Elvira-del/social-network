@@ -1,6 +1,6 @@
 import React from "react";
-import { ContactItem } from "../ContactItem/ContactItem";
-import { Loader } from "../Loader/Loader";
+import { ContactItem } from "./ContactItem/ContactItem";
+import { Loader } from "../../Loader/Loader";
 import styles from "./Contacts.module.scss";
 
 const Contacts = ({ contacts, loading }) => {

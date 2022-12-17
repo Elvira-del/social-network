@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Contacts } from "../Contacts/Contacts";
-import { Messages } from "../Messages/Messages";
+import { Contacts } from "./Contacts/Contacts";
+import { Messages } from "./Messages/Messages";
 import styles from "./Dialogs.module.scss";
 
 const Dialogs = () => {
