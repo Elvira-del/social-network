@@ -7,9 +7,18 @@ export const postsSlice = createSlice({
     createPost: (state, action) => {
       state.push(action.payload);
     },
+
+    editPost: (state, action) => {
+      const { id, contentPost } = action.payload;
+      const existPost = state.find((post) => post.id === id);
+
+      if (existPost) {
+        existPost.contentPost = contentPost;
+      }
+    },
   },
 });
 
-export const { createPost } = postsSlice.actions;
+export const { createPost, editPost } = postsSlice.actions;
 
 export default postsSlice.reducer;
